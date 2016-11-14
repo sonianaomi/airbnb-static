@@ -1,0 +1,21 @@
+---
+title: Our team | Le Wagon Middleman Airbnb
+---
+
+<div class="text-center">
+  <div class="container padded">
+    <h1>Our team</h1>
+    <ul class="list-inline">
+      <% data.team.each do |member| %>
+        <li>
+          <h2><%= member.name %></h2>
+          <%= image_tag "#{member.image}", class: "img-circle" %>
+        </li>
+      <% end %>
+    </ul>
+    <div class="team-contact padded">
+      <i class="fa fa-envelope"></i>
+      <%= link_to "contact@airbnb.com", "mailto: contact@airbnb.com" %>
+    </div>
+  </div>
+</div>
